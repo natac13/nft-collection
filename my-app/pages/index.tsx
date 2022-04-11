@@ -128,6 +128,8 @@ export default function Home() {
         await getOwner()
       }
       setPresaleStarted(_presaleStarted)
+      const metadataUrl = await nftContract.tokenURI(1)
+      console.log({ metadataUrl })
       return _presaleStarted
     } catch (err) {
       console.error(err)
